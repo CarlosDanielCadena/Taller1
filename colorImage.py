@@ -34,7 +34,7 @@ class colorImage:
         if x == "red":                      # Condición para rojo
             self.image[:, :, 0] = 0         # Eliminar componentes azules
             self.image[:, :, 1] = 0         # Eliminar componentes verdes
-            self.image[:, :, 1] = self.gris # Grises en componente roja
+            self.image[:, :, 2] = self.gris # Grises en componente roja
             cv2.imshow("Rojo", self.image)  # Imprimir imagen rojiza
             cv2.waitKey(1000)               # Esperar 1s antes de seguir
 
@@ -48,7 +48,7 @@ class colorImage:
         elif x == 'blue':                   # Condición para azul
             self.image[:, :, 1] = 0         # Eliminar componentes verdes
             self.image[:, :, 2] = 0         # Eliminar componentes rojas
-            self.image[:, :, 1] = self.gris # Grises en componente azul
+            self.image[:, :, 0] = self.gris # Grises en componente azul
             cv2.imshow("Azul", self.image)  # Imprimir imagen azuloza
             cv2.waitKey(1000)               # Esperar 1s antes de seguir
 
